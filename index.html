@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Push the Button</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            flex-direction: column;
+        }
+        button {
+            background-color: #007AFF;
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            font-size: 24px;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.1s, background-color 0.2s;
+        }
+        button:active {
+            transform: scale(0.95);
+            background-color: #0056b3;
+        }
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="buttonClicked()">PUSH</button>
+    <p id="counter">Times pushed: 0</p>
+
+    <script>
+        let count = 0;
+        function buttonClicked() {
+            count++;
+            document.getElementById('counter').innerText = "Times pushed: " + count;
+        }
+    </script>
+
+</body>
+</html>
