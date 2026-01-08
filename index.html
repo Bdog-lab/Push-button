@@ -3,50 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Push the Button</title>
+    <title>Unblocked Button</title>
     <style>
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f2f5;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #1a1a1a; /* Dark mode for "stealth" */
+            font-family: 'Courier New', Courier, monospace; /* Retro game font */
             margin: 0;
             flex-direction: column;
+            color: #00ff00; /* Hacker green text */
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px #00ff00;
         }
         button {
-            background-color: #007AFF;
-            color: white;
-            border: none;
-            padding: 20px 40px;
+            background-color: #333;
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            padding: 20px 50px;
             font-size: 24px;
-            border-radius: 12px;
+            border-radius: 5px;
             cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.1s, background-color 0.2s;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+            transition: all 0.1s;
+            font-family: inherit;
         }
         button:active {
             transform: scale(0.95);
-            background-color: #0056b3;
+            background-color: #00ff00;
+            color: #000;
         }
         p {
             margin-top: 20px;
-            font-size: 18px;
-            color: #333;
+            font-size: 20px;
+        }
+        .badge {
+            background: red;
+            color: white;
+            padding: 5px 10px;
+            font-size: 12px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-family: sans-serif;
         }
     </style>
 </head>
 <body>
 
+    <div class="badge">UNBLOCKED VERSION</div>
+    <h1>THE BUTTON</h1>
+    
     <button onclick="buttonClicked()">PUSH</button>
-    <p id="counter">Times pushed: 0</p>
+    <p id="counter">Score: 0</p>
 
     <script>
         let count = 0;
         function buttonClicked() {
             count++;
-            document.getElementById('counter').innerText = "Times pushed: " + count;
+            document.getElementById('counter').innerText = "Score: " + count;
         }
     </script>
 
